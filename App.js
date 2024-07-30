@@ -16,13 +16,13 @@ export default function App() {
 
   const handleInputChange = (newTask) => {
     setTask(newTask);
-    console.log(newTask)
+    console.log(newTask);
   }
 
   const handleNewItem = () => {
-    if (task.trim().length > 2 ) {
+    if (task.trim().length > 2) {
       setTodos((prevTodos) => (
-        [ { task }, ...prevTodos]
+        [{ task }, ...prevTodos]
       ))
       setTask('')
       setIsVisible(false)
@@ -39,9 +39,12 @@ export default function App() {
       {!todos.length > 0 ? (
         <View style={styles.imgView}>
           {/* <Text>vmfkmvfmvmfvmfmvmfmjf</Text> */}
-          <Image source={{
-          uri: 'https://img.freepik.com/free-vector/notebook-concept-illustration_114360-377.jpg',
-        }} style={styles.image}/>
+          <Image
+            source={{
+              uri: 'https://img.freepik.com/free-vector/notebook-concept-illustration_114360-377.jpg',
+            }}
+            style={styles.image}
+          />
         </View>
       ) : (
         <View style={styles.sView}>
@@ -119,7 +122,7 @@ const styles = StyleSheet.create({
     paddingTop: 50,
     paddingBottom: 50,
   },
-  imgView:{
+  imgView: {
     height: '100%',
     backgroundColor: 'white',
     width: '100%',
@@ -166,7 +169,6 @@ const styles = StyleSheet.create({
   MHtext: {
     fontSize: 25,
     color: '#ffa500',
-
     textShadowColor: 'black',
     textShadowRadius: 1,
     textShadowOffset: {
