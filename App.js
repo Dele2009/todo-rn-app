@@ -34,7 +34,8 @@ export default function App() {
         headerTintColor: '#ff0000',
         headerStyle: styles.header,
         contentStyle: styles.homeContent
-      }}>
+      }}
+      >
         <Tab.Screen
           name='RootNav1'
           component={RootNav}
