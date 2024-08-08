@@ -1,17 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native'
-import { Image } from 'expo-image'
+import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
-// https://img.freepik.com/free-vector/check-mark-circle-gradient_78370-4445.jpg
 const Header = () => {
     return (
         <View style={styles.header}>
-            {/* <Image source={{
-                uri: 'https://img.freepik.com/free-vector/check-mark-circle-gradient_78370-4445.jpg',
-            }} style={styles.image} /> */}
+             <Image source={{
+               uri: 'https://img.freepik.com/free-vector/check-mark-circle-gradient_78370-4445.jpg',
+             }} style={styles.image} />
+            
             <Image
-                source={{
-                    uri: 'asset:/icon.png',
-                }}
+                source={require('../img/text.png')}
                 style={styles.image}
             />
             <Text style={styles.text}>Todo App</Text>
