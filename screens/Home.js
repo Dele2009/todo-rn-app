@@ -14,7 +14,6 @@ const Home = () => {
                 Go to menu
             </PrimaryButton>
             
-            <Button title='Go to menu' onPress={() => navigation.navigate('Menu')} />
         </View>
     )
 }

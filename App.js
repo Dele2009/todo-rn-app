@@ -12,6 +12,18 @@ import { Feather } from '@expo/vector-icons';
 const Stack = createNativeStackNavigator()
 const Drawer = createDrawerNavigator()
 const Tab = createBottomTabNavigator()
+
+const RootNav = () => {
+  return (
+    <Drawer.Navigator>
+      <Drawer.Screen
+        name='Home'
+        component={Home}
+      />
+    </Drawer.Navigator>
+  )
+}
+
 export default function App() {
 
   return (
@@ -24,10 +36,10 @@ export default function App() {
         contentStyle: styles.homeContent
       }}>
         <Tab.Screen
-          name='Home'
-          component={Home}
+          name='RootNav1'
+          component={RootNav}
           options={{
-            tabBarIcon: ({color, size}) => (
+            tabBarIcon: ({ color, size }) => (
               <Feather name='home' size={30} color={color} />
             )
           }}
@@ -37,7 +49,7 @@ export default function App() {
           component={Menu}
           options={{
             headerShadowVisible: false,
-            tabBarIcon: ({color, size}) => (
+            tabBarIcon: ({ color, size }) => (
               <Feather name='menu' size={30} color={color} />
             )
           }}
