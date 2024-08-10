@@ -13,65 +13,89 @@ const Stack = createNativeStackNavigator()
 const Drawer = createDrawerNavigator()
 const Tab = createBottomTabNavigator()
 
-const RootNav = () => {
+// const RootNav = () => {
+//   return (
+//     <Drawer.Navigator>
+//       <Drawer.Screen
+//         name='Home'
+//         component={Home}
+//       />
+//     </Drawer.Navigator>
+//   )
+// }
+
+const App = () => {
   return (
-    <Drawer.Navigator>
-      <Drawer.Screen
-        name='Home'
-        component={Home}
-      />
-    </Drawer.Navigator>
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{
+          // headerShadowVisible: false,
+          headerShown: false
+        }}
+      >
+        <Stack.Screen
+          name='home'
+          component={Home}
+          // options={{
+          // }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
 
-export default function App() {
+export default App
 
-  return (
-    <NavigationContainer>
-      <Tab.Navigator screenOptions={{
-        tabBarActiveTintColor: 'green',
-        headerShadowVisible: false,
-        headerTintColor: '#ff0000',
-        headerStyle: styles.header,
-        contentStyle: styles.homeContent
-      }}>
-        <Tab.Screen
-          name='RootNav1'
-          component={RootNav}
-          options={{
-            tabBarIcon: ({ color, size }) => (
-              <Feather name='home' size={30} color={color} />
-            )
-          }}
-        />
-        <Tab.Screen
-          name='Menu'
-          component={Menu}
-          options={{
-            headerShadowVisible: false,
-            tabBarIcon: ({ color, size }) => (
-              <Feather name='menu' size={30} color={color} />
-            )
-          }}
-        />
-      </Tab.Navigator>
-    </NavigationContainer>
+const styles = StyleSheet.create({})
 
-  );
-}
+// export default function App() {
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  header: {
-    backgroundColor: 'green',
-    // marginTop: 50
-  },
-  homeContent: {
-    backgroundColor: 'red'
-  }
-});
+//   return (
+//     <NavigationContainer>
+//       <Tab.Navigator screenOptions={{
+//         tabBarActiveTintColor: 'green',
+//         headerShadowVisible: false,
+//         headerTintColor: '#ff0000',
+//         headerStyle: styles.header,
+//         contentStyle: styles.homeContent
+//       }}>
+//         <Tab.Screen
+//           name='RootNav1'
+//           component={RootNav}
+//           options={{
+//             tabBarIcon: ({ color, size }) => (
+//               <Feather name='home' size={30} color={color} />
+//             )
+//           }}
+//         />
+//         <Tab.Screen
+//           name='Menu'
+//           component={Menu}
+//           options={{
+//             headerShadowVisible: false,
+//             tabBarIcon: ({ color, size }) => (
+//               <Feather name='menu' size={30} color={color} />
+//             )
+//           }}
+//         />
+//       </Tab.Navigator>
+//     </NavigationContainer>
+
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#fff',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//   },
+//   header: {
+//     backgroundColor: 'green',
+//     // marginTop: 50
+//   },
+//   homeContent: {
+//     backgroundColor: 'red'
+//   }
+// });
