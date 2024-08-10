@@ -1,7 +1,10 @@
 import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
+
+// Button component
 import PrimaryButton from '../components/PrimaryButton'
+import { buttonStyles } from '../styles/GlobalStyles'
 
 
 
@@ -22,12 +25,26 @@ const Home = () => {
 
                 <Text style={styles.text}>Localshop</Text>
             </View>
-            {/* <PrimaryButton
-                propStyles={buttonStyles}
-                onPress={() => navigation.navigate('Menu')}
+            <Text style={[styles.h1, styles.test]}>Everything you need is in one place</Text>
+            <Text style={[styles.homeP, styles.test]}>
+                Find your daily nessesities at ----, The  world's largest
+                fashion e-commerce store is now available on mobile, Shop now!  
+            </Text>
+            <View>
+
+            </View>
+            <PrimaryButton
+                propStyles={buttonStyles.buttomSolid}
+                onPress={() => navigation.navigate('LoginPage')}
             >
-                Go to menu
-            </PrimaryButton> */}
+                Login
+            </PrimaryButton>
+            <PrimaryButton
+                propStyles={buttonStyles.buttomOutline}
+                onPress={() => navigation.navigate('RegisterPage')}
+            >
+                Register
+            </PrimaryButton>
 
         </View>
     )
@@ -35,28 +52,14 @@ const Home = () => {
 
 export default Home
 
-const buttonStyles = StyleSheet.create({
-    buttonInnerContainer: {
-        backgroundColor: 'blue',
-        paddingVertical: 16,
-        paddingHorizontal: 16,
-        elevation: 2,
-    },
-    buttonText: {
-        color: "white",
-        textAlign: "center",
-    },
-    pressed: {
-        opacity: 0.75,
-    },
-})
+
 const styles = StyleSheet.create({
     homeContainer: {
-        paddingHorizontal: 20
+        paddingHorizontal: 19
     },
     heroContainer: {
         width: '100%',
-        height: 500,
+        height: 530,
     },
     heroImage: {
         width: '100%',
@@ -74,7 +77,22 @@ const styles = StyleSheet.create({
     },
     text: {
         fontWeight: 'bold',
-        fontSize: 20
+        fontSize: 25
+    },
+    test: {
+        marginVertical: 9
+
+    },
+    h1:{
+        fontWeight: 'bold',
+        color: '#4f4f4f',
+        fontSize: 30,
+    },
+    homeP:{
+        // fontWeight: 'bold',
+        // fontSize: 30
+        color: 'gray'
     }
+
 
 })

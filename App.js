@@ -5,6 +5,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { NavigationContainer } from '@react-navigation/native'
 import Home from './screens/Home';
+import Login from './screens/Login';
 // import DefaultImage from ;
 
 // const RootNav = () => {
@@ -30,6 +31,10 @@ export default function App() {
         <Stack.Screen
           name='Home'
           component={Home}
+        />
+        <Stack.Screen
+          name='LoginPage'
+          component={Login}
         />
       </Stack.Navigator>
     </NavigationContainer>
