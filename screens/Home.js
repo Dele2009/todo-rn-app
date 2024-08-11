@@ -1,98 +1,93 @@
-import { Image, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { useNavigation } from '@react-navigation/native'
+import { Image, StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { useNavigation } from "@react-navigation/native";
 
 // Button component
-import PrimaryButton from '../components/PrimaryButton'
-import { buttonStyles } from '../styles/GlobalStyles'
-
-
+import PrimaryButton from "../components/PrimaryButton";
+import { buttonStyles } from "../styles/GlobalStyles";
 
 const Home = () => {
-    const navigation = useNavigation()
+    const navigation = useNavigation();
     return (
         <View style={styles.homeContainer}>
             <View style={styles.heroContainer}>
-                <Image style={styles.heroImage}
-                    source={require('../assets/img/hero-img.png')}
+                <Image
+                    style={styles.heroImage}
+                    source={require("../assets/img/hero-img.png")}
                 />
             </View>
 
             <View style={styles.textContainer}>
-                <Image style={styles.textLogo}
-                    source={require('../assets/img/hero-img.png')}
+                <Image
+                    style={styles.textLogo}
+                    source={require("../assets/img/hero-img.png")}
                 />
 
                 <Text style={styles.text}>Localshop</Text>
             </View>
-            <Text style={[styles.h1, styles.test]}>Everything you need is in one place</Text>
-            <Text style={[styles.homeP, styles.test]}>
-                Find your daily nessesities at ----, The  world's largest
-                fashion e-commerce store is now available on mobile, Shop now!  
+            <Text style={[styles.h1, styles.test]}>
+                Everything you need is in one place
             </Text>
-            <View>
-
-            </View>
+            <Text style={[styles.homeP, styles.test]}>
+                Find your daily nessesities at ----, The world's largest fashion
+                e-commerce store is now available on mobile, Shop now!
+            </Text>
+            <View></View>
             <PrimaryButton
                 propStyles={buttonStyles.buttomSolid}
-                onPress={() => navigation.navigate('LoginPage')}
+                onPress={() => navigation.navigate("LoginPage")}
             >
                 Login
             </PrimaryButton>
             <PrimaryButton
                 propStyles={buttonStyles.buttomOutline}
-                onPress={() => navigation.navigate('RegisterPage')}
+                onPress={() => navigation.navigate("RegisterPage")}
             >
                 Register
             </PrimaryButton>
-
         </View>
-    )
-}
+    );
+};
 
-export default Home
-
+export default Home;
 
 const styles = StyleSheet.create({
     homeContainer: {
-        paddingHorizontal: 19
+        paddingHorizontal: 19,
     },
     heroContainer: {
-        width: '100%',
+        width: "100%",
         height: 530,
     },
     heroImage: {
-        width: '100%',
-        height: '100%',
+        width: "100%",
+        height: "100%",
     },
     textContainer: {
-        flexDirection: 'row',
+        flexDirection: "row",
         // justifyContent: 'center',
-        alignItems: 'center',
-        width: '100%'
+        alignItems: "center",
+        width: "100%",
     },
     textLogo: {
         width: 60,
-        height: 60
+        height: 60,
     },
     text: {
-        fontWeight: 'bold',
-        fontSize: 25
+        fontWeight: "bold",
+        fontSize: 25,
     },
     test: {
-        marginVertical: 9
-
+        marginVertical: 9,
     },
-    h1:{
-        fontWeight: 'bold',
-        color: '#4f4f4f',
+    h1: {
+        fontWeight: "bold",
+        color: "#4f4f4f",
         fontSize: 30,
     },
-    homeP:{
+    homeP: {
         // fontWeight: 'bold',
         // fontSize: 30
-        color: 'gray'
-    }
-
-
-})
+        color: "gray",
+    },
+});
