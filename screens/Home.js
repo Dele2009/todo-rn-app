@@ -1,13 +1,13 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { useNavigation } from "@react-navigation/native";
+// import { useNavigation } from "@react-navigation/native";
 
 // Button component
 import PrimaryButton from "../components/PrimaryButton";
 import { buttonStyles } from "../styles/GlobalStyles";
 
-const Home = () => {
-    const navigation = useNavigation();
+const Home = ({navigation}) => {
+    // const navigation = useNavigation();
     return (
         <View style={styles.homeContainer}>
             <View style={styles.heroContainer}>
@@ -20,7 +20,7 @@ const Home = () => {
             <View style={styles.textContainer}>
                 <Image
                     style={styles.textLogo}
-                    source={require("../assets/img/hero-img.png")}
+                    source={require("../assets/img/logo-shop.png")}
                 />
 
                 <Text style={styles.text}>Localshop</Text>
@@ -68,10 +68,12 @@ const styles = StyleSheet.create({
         // justifyContent: 'center',
         alignItems: "center",
         width: "100%",
+        // gap: 10,
+        marginBottom: 15
     },
     textLogo: {
-        width: 60,
-        height: 60,
+        width: 70,
+        height: 70,
     },
     text: {
         fontWeight: "bold",

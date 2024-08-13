@@ -15,10 +15,11 @@ import { buttonStyles } from "../styles/GlobalStyles";
 
 // import { useNavigation } from "@react-navigation/native";
 
-const Login = ({navigation}) => {
+const Register = ({navigation}) => {
     // const navigation = useNavigation();
 
     const [isSecure, setIsSecure] = useState(true);
+    const [isConfirmSecure, setIsConfirmSecure] = useState(true);
     return (
         <View style={styles.LoginContainer}>
             <View style={styles.pageLogoContainer}>
@@ -40,11 +41,20 @@ const Login = ({navigation}) => {
             </View>
 
             <Text style={{fontWeight: 'bold',fontSize: 32,}}>
-                Login
+                Register
             </Text>
-            <Text style={{color: 'gray', marginVertical: 20}}>
-                Login to continue using the using the app
+            <Text style={{color: 'gray', marginVertical: 10}}>
+                Enter Your Personal Infomation 
             </Text>
+            <Text style={styles.inputLabel}>Username</Text>
+           
+            <View style={styles.inputContainer}>
+                <TextInput
+                    style={styles.input}
+                    keyboardType="default"
+                    placeholder="Enter your name"
+                />
+            </View>
             <Text style={styles.inputLabel}>Email</Text>
            
             <View style={styles.inputContainer}>
@@ -84,24 +94,51 @@ const Login = ({navigation}) => {
                     )}
                 </View>
             </View>
+            <Text style={styles.inputLabel}>Confirm password</Text>
+
+            <View style={[styles.inputContainer, styles.inputPasswordContainer, {marginBottom: 30}]}>
+                <TextInput
+                    style={styles.inputPassword}
+                    keyboardType="default"
+                    placeholder="Enter confirm password"
+                    secureTextEntry={isSecure}
+                />
+                <View style={styles.IconCont}>
+                    {isConfirmSecure ? (
+                        <TouchableOpacity onPress={() => setIsConfirmSecure(false)}>
+                            <Feather
+                                name="eye"
+                                size={25}
+                                color={"black"}
+                                style={styles.eyeIcon}
+                            />
+                        </TouchableOpacity>
+                    ) : (
+                        <TouchableOpacity onPress={() => setIsConfirmSecure(true)}>
+                            <Feather
+                                name="eye-off"
+                                size={25}
+                                color={"black"}
+                                style={styles.eyeIcon}
+                            />
+                        </TouchableOpacity>
+                    )}
+                </View>
+            </View>
             {/* <Feather name='eye' size={20} color={'black'}/> */}
-            <TouchableOpacity>
-                <Text style={{ textAlign: "right", marginVertical: 20 }}>
-                    Forgot Password?
-                </Text>
-            </TouchableOpacity>
+           
 
             <PrimaryButton
                 propStyles={buttonStyles.buttomSolid}
             // onPress={() => navigation.navigate('LoginPage')}
             >
-                Login
+                Register
             </PrimaryButton>
         </View>
     );
 };
 
-export default Login;
+export default Register;
 
 const styles = StyleSheet.create({
     LoginContainer: {
@@ -110,7 +147,7 @@ const styles = StyleSheet.create({
     },
     pageLogoContainer: {
         width: "100%",
-        height: 300,
+        height: 250,
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
@@ -127,8 +164,8 @@ const styles = StyleSheet.create({
     },
 
     pageLogo: {
-        width: 160,
-        height: 160,
+        width: 140,
+        height: 140,
         backgroundColor: "#b6e3fd69",
         borderRadius: 100,
     },
@@ -136,12 +173,12 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         fontSize: 18,
         marginVertical: 10,
-        marginTop: 30,
+        marginTop: 25,
         color: "black",
     },
     inputContainer: {
         width: "100%",
-        height: 70,
+        height: 60,
         backgroundColor: "#e3e3e3",
         paddingVertical: 10,
         paddingHorizontal: 20,
@@ -163,7 +200,9 @@ const styles = StyleSheet.create({
         height: "100%",
         fontSize: 17,
     },
-    eyeIcon: {
-        // padding: 30
-    },
+    // IconCont: {
+    //     // padding: 30,
+    //     backgroundColor: 'red',
+    //     height: '100%'
+    // },
 });

@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const buttonStyles = StyleSheet.create({
   buttomSolid: {
     buttonInnerContainer: {
-      backgroundColor: "blue",
+      backgroundColor: "#22acf1",
       borderRadius: 28,
       paddingVertical: 17,
       paddingHorizontal: 16,

@@ -1,15 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import {
-  StyleSheet,
-  Image,
-  FlatList,
-  Text,
-  TouchableOpacity,
-  View,
-  TextInput,
-  Button,
+  StyleSheet
 } from "react-native";
-import { MaterialIcons } from "@expo/vector-icons";
 
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
@@ -17,6 +9,7 @@ import { NavigationContainer } from "@react-navigation/native";
 // App screens
 import Home from "./screens/Home";
 import Login from "./screens/Login";
+import Register from "./screens/register";
 
 const Stack = createNativeStackNavigator();
 
@@ -30,6 +23,7 @@ export default function App() {
       >
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="LoginPage" component={Login} />
+        <Stack.Screen name="RegisterPage" component={Register} />
       </Stack.Navigator>
     </NavigationContainer>
   );
