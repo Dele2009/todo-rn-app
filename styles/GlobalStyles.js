@@ -23,7 +23,7 @@ export const buttonStyles = StyleSheet.create({
     buttonInnerContainer: {
       backgroundColor: "transparent",
       borderRadius: 28,
-      borderWidth: 3,
+      borderWidth: 1.2,
       borderStyle: "solid",
       borderColor: "gray",
       paddingVertical: 17,

@@ -52,6 +52,7 @@ const Login = ({navigation}) => {
                     style={styles.input}
                     keyboardType="email-address"
                     placeholder="Enter your email"
+                    cursorColor={'black'}
                 />
             </View>
             <Text style={styles.inputLabel}>Password</Text>
@@ -61,6 +62,7 @@ const Login = ({navigation}) => {
                     keyboardType="default"
                     placeholder="Enter password"
                     secureTextEntry={isSecure}
+                    cursorColor={'black'}
                 />
                 <View>
                     {isSecure ? (
@@ -97,6 +99,12 @@ const Login = ({navigation}) => {
             >
                 Login
             </PrimaryButton>
+
+            <View style={styles.DividerSec}>
+              <View style={styles.divider}></View>
+              <Text>Or Login with</Text>
+              <View style={styles.divider}></View>
+            </View>
         </View>
     );
 };
@@ -110,7 +118,7 @@ const styles = StyleSheet.create({
     },
     pageLogoContainer: {
         width: "100%",
-        height: 300,
+        height: 250,
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
@@ -162,6 +170,17 @@ const styles = StyleSheet.create({
         width: "90%",
         height: "100%",
         fontSize: 17,
+    },
+    DividerSec: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        marginVertical: 20
+    },
+    divider: {
+        width: '30%',
+        borderTopWidth: 1.5,
+        borderColor: 'lightgrey'
     },
     eyeIcon: {
         // padding: 30

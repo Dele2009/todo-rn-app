@@ -20,7 +20,7 @@ const Home = ({navigation}) => {
             <View style={styles.textContainer}>
                 <Image
                     style={styles.textLogo}
-                    source={require("../assets/img/logo-shop.png")}
+                    source={require("../assets/icon.png")}
                 />
 
                 <Text style={styles.text}>Localshop</Text>
@@ -68,12 +68,13 @@ const styles = StyleSheet.create({
         // justifyContent: 'center',
         alignItems: "center",
         width: "100%",
-        // gap: 10,
+        gap: 10,
         marginBottom: 15
     },
     textLogo: {
-        width: 70,
-        height: 70,
+        width: 45,
+        height: 45,
+        borderRadius: 100
     },
     text: {
         fontWeight: "bold",
