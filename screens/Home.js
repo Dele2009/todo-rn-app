@@ -32,7 +32,7 @@ const Home = ({navigation}) => {
                 Find your daily nessesities at ----, The world's largest fashion
                 e-commerce store is now available on mobile, Shop now!
             </Text>
-            <View></View>
+            <View>
             <PrimaryButton
                 propStyles={buttonStyles.buttomSolid}
                 onPress={() => navigation.navigate("LoginPage")}
@@ -45,6 +45,7 @@ const Home = ({navigation}) => {
             >
                 Register
             </PrimaryButton>
+            </View>
         </View>
     );
 };

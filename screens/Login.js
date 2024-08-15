@@ -181,8 +181,5 @@ const styles = StyleSheet.create({
         width: '30%',
         borderTopWidth: 1.5,
         borderColor: 'lightgrey'
-    },
-    eyeIcon: {
-        // padding: 30
-    },
+    }
 });
