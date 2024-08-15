@@ -13,10 +13,8 @@ import { Feather } from "@expo/vector-icons";
 import PrimaryButton from "../components/PrimaryButton";
 import { buttonStyles } from "../styles/GlobalStyles";
 
-// import { useNavigation } from "@react-navigation/native";
 
 const Login = ({navigation}) => {
-    // const navigation = useNavigation();
 
     const [isSecure, setIsSecure] = useState(true);
     return (
@@ -30,7 +28,6 @@ const Login = ({navigation}) => {
                         name="chevron-left"
                         size={30}
                         color={"black"}
-                    // style={styles.eyeIcon}
                     />
                 </TouchableOpacity>
                 <Image
@@ -86,7 +83,6 @@ const Login = ({navigation}) => {
                     )}
                 </View>
             </View>
-            {/* <Feather name='eye' size={20} color={'black'}/> */}
             <TouchableOpacity>
                 <Text style={{ textAlign: "right", marginVertical: 20 }}>
                     Forgot Password?
@@ -95,7 +91,6 @@ const Login = ({navigation}) => {
 
             <PrimaryButton
                 propStyles={buttonStyles.buttomSolid}
-            // onPress={() => navigation.navigate('LoginPage')}
             >
                 Login
             </PrimaryButton>

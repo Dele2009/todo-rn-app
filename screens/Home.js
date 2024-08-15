@@ -1,13 +1,11 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
-// import { useNavigation } from "@react-navigation/native";
 
 // Button component
 import PrimaryButton from "../components/PrimaryButton";
 import { buttonStyles } from "../styles/GlobalStyles";
 
 const Home = ({navigation}) => {
-    // const navigation = useNavigation();
     return (
         <View style={styles.homeContainer}>
             <View style={styles.heroContainer}>

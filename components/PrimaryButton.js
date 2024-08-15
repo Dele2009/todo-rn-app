@@ -1,5 +1,4 @@
 import { View, Text, Pressable, StyleSheet } from "react-native";
-// import { theme } from '../utils/theme';
 
 const PrimaryButton = ({ children, onPress, propStyles })=> {
   return (
@@ -26,5 +25,4 @@ const styles = StyleSheet.create({
     marginVertical: 9,
     overflow: "hidden",
   },
- 
 });

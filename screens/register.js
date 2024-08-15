@@ -13,10 +13,8 @@ import { Feather } from "@expo/vector-icons";
 import PrimaryButton from "../components/PrimaryButton";
 import { buttonStyles } from "../styles/GlobalStyles";
 
-// import { useNavigation } from "@react-navigation/native";
 
 const Register = ({navigation}) => {
-    // const navigation = useNavigation();
 
     const [isSecure, setIsSecure] = useState(true);
     const [isConfirmSecure, setIsConfirmSecure] = useState(true);
@@ -31,7 +29,6 @@ const Register = ({navigation}) => {
                         name="chevron-left"
                         size={30}
                         color={"black"}
-                    // style={styles.eyeIcon}
                     />
                 </TouchableOpacity>
                 <Image
@@ -130,7 +127,6 @@ const Register = ({navigation}) => {
 
             <PrimaryButton
                 propStyles={buttonStyles.buttomSolid}
-            // onPress={() => navigation.navigate('LoginPage')}
             >
                 Register
             </PrimaryButton>
@@ -199,10 +195,5 @@ const styles = StyleSheet.create({
         width: "90%",
         height: "100%",
         fontSize: 17,
-    },
-    // IconCont: {
-    //     // padding: 30,
-    //     backgroundColor: 'red',
-    //     height: '100%'
-    // },
+    }
 });
