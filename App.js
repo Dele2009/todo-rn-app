@@ -9,22 +9,26 @@ import { NavigationContainer } from "@react-navigation/native";
 import Home from "./screens/Home";
 import Login from "./screens/Login";
 import Register from "./screens/register";
+import { StatusBar } from "expo-status-bar";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-        }}
-      >
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="LoginPage" component={Login} />
-        <Stack.Screen name="RegisterPage" component={Register} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <>
+      <StatusBar style="auto" />
+      <NavigationContainer>
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false,
+          }}
+        >
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="LoginPage" component={Login} />
+          <Stack.Screen name="RegisterPage" component={Register} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </>
   );
 }
 
