@@ -64,7 +64,6 @@ const styles = StyleSheet.create({
     },
     textContainer: {
         flexDirection: "row",
-        // justifyContent: 'center',
         alignItems: "center",
         width: "100%",
         gap: 10,
@@ -88,8 +87,6 @@ const styles = StyleSheet.create({
         fontSize: 30,
     },
     homeP: {
-        // fontWeight: 'bold',
-        // fontSize: 30
         color: "gray",
     },
 });

@@ -122,7 +122,6 @@ const Register = ({navigation}) => {
                     )}
                 </View>
             </View>
-            {/* <Feather name='eye' size={20} color={'black'}/> */}
            
 
             <PrimaryButton
