@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "todo-mobileApp",
-    "slug": "todo-mobileApp",
+    "name": "MashMall",
+    "slug": "MashMall",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -21,10 +21,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.dexdev.MashMall"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "2df25165-d17d-454e-98fc-a498c2da7171"
+      }
+    },
+    "owner": "dexdev"
   }
 }
